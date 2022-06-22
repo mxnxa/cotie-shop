@@ -1,0 +1,40 @@
+header {
+  width: 100vw;
+  height: 144px;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  //   align-items: center;
+  //   font-family: "Libre Baskerville", serif;
+  font-size: 24px;
+  font-weight: 700;
+
+  a {
+    cursor: url(../images/cursor-pointer.png), auto;
+  }
+
+  nav {
+    .gnbList {
+      display: flex;
+      justify-content: center;
+      //   align-items: center;
+
+      .depth01 {
+        & + & {
+          margin-left: 30px;
+        }
+        a {
+          display: block;
+          padding: 16px 25px;
+        }
+        .depth02 {
+          li {
+            > a {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

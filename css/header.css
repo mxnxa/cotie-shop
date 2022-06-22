@@ -1,0 +1,40 @@
+header {
+  width: 100vw;
+  height: 144px;
+  padding: 0 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+header a {
+  cursor: url(../images/cursor-pointer.png), auto;
+}
+
+header nav .gnbList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav .gnbList .depth01 + header nav .gnbList .depth01 {
+  margin-left: 30px;
+}
+
+header nav .gnbList .depth01 a {
+  display: block;
+  padding: 16px 25px;
+}
+
+header nav .gnbList .depth01 .depth02 li > a {
+  font-size: 18px;
+}
+/*# sourceMappingURL=header.css.map */
