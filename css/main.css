@@ -123,4 +123,17 @@ main .brand .brandGroup .petsochic .wrapper .brandInfo {
       -ms-flex-align: center;
           align-items: center;
 }
+
+main .brand .brandGroup .petsochic .wrapper .brandInfo .infoImg {
+  width: 750px;
+}
+
+main .brand .brandGroup .petsochic .wrapper .brandInfo .infoText {
+  text-align: center;
+  padding-left: 50px;
+}
+
+main .brand .brandGroup .petsochic .wrapper .brandInfo .infoText p {
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */
