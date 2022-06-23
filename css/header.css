@@ -1,5 +1,5 @@
 header {
-  width: 100vw;
+  width: 100%;
   height: 144px;
   padding: 0 80px;
   display: -webkit-box;
@@ -8,12 +8,30 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Libre Baskerville", serif;
   font-size: 24px;
   font-weight: 700;
+  position: fixed;
+  z-index: 999;
 }
 
 header a {
   cursor: url(../images/cursor-pointer.png), auto;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header nav .gnbList {
@@ -25,16 +43,82 @@ header nav .gnbList {
           justify-content: center;
 }
 
-header nav .gnbList .depth01 + header nav .gnbList .depth01 {
-  margin-left: 30px;
+header nav .gnbList .depth01 {
+  width: 160px;
+  display: inline-block;
+  position: relative;
 }
 
-header nav .gnbList .depth01 a {
+header nav .gnbList .depth01:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+header nav .gnbList .depth01:hover .depth02 {
+  opacity: 1;
+  visibility: visible;
+}
+
+header nav .gnbList .depth01::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+header nav .gnbList .depth01 > a {
+  width: 100%;
   display: block;
   padding: 16px 25px;
+  text-align: center;
+  position: relative;
+}
+
+header nav .gnbList .depth01 .depth02 {
+  width: 100%;
+  background-color: #000;
+  padding: 25px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+header nav .gnbList .depth01 .depth02 li:hover > a::after {
+  opacity: 1;
 }
 
 header nav .gnbList .depth01 .depth02 li > a {
+  display: inline-block;
+  color: #fff;
   font-size: 18px;
+  font-family: "NotoSansKR", "LibreBaskerville", sans-serif;
+  line-height: 1.7;
+  padding: 5px 0;
+}
+
+header nav .gnbList .depth01 .depth02 li > a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 /*# sourceMappingURL=header.css.map */
