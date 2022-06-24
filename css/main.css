@@ -8,6 +8,15 @@ main .wrapper {
   margin: 0 auto;
 }
 
+main .motionImg {
+  position: absolute;
+}
+
+main .motionImg.motion {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 main a.basicBtn {
   display: inline-block;
   width: 258px;
@@ -53,21 +62,17 @@ main .visual .wrapper {
   position: relative;
 }
 
-main .visual .wrapper .motionImg {
-  position: absolute;
-}
-
-main .visual .wrapper .motionImg.bib {
+main .visual .wrapper .bib {
   top: -173px;
   left: 355px;
 }
 
-main .visual .wrapper .motionImg.bone {
+main .visual .wrapper .bone {
   top: 465px;
   left: -30px;
 }
 
-main .visual .wrapper .motionImg.cloud {
+main .visual .wrapper .cloud {
   top: 255px;
   right: -22px;
 }
@@ -106,13 +111,22 @@ main .brand {
   padding: 242px 0 150px;
 }
 
+main .brand .wrapper {
+  position: relative;
+}
+
+main .brand .wrapper .fish {
+  top: -85px;
+  right: 50px;
+}
+
 main .brand .wrapper h2 {
   font-size: 100px;
   text-align: center;
   margin-bottom: 150px;
 }
 
-main .brand .brandGroup .petsochic .wrapper .brandInfo {
+main .brand .brandGroup .wrapper .brandInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,16 +138,85 @@ main .brand .brandGroup .petsochic .wrapper .brandInfo {
           align-items: center;
 }
 
-main .brand .brandGroup .petsochic .wrapper .brandInfo .infoImg {
+main .brand .brandGroup .wrapper .brandInfo .infoImg {
   width: 750px;
 }
 
-main .brand .brandGroup .petsochic .wrapper .brandInfo .infoText {
+main .brand .brandGroup .wrapper .brandInfo .infoText {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-align: center;
-  padding-left: 50px;
 }
 
-main .brand .brandGroup .petsochic .wrapper .brandInfo .infoText p {
+main .brand .brandGroup .wrapper .brandInfo .infoText p {
   text-align: center;
+  font-size: 20px;
+  line-height: 1.6em;
+  margin-top: 50px;
+}
+
+main .brand .brandGroup .petsochic .brandMovie {
+  margin-top: 80px;
+  padding-right: 180px;
+}
+
+main .brand .brandGroup .petsochic .brandMovie .movieWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+main .brand .brandGroup .petsochic .brandMovie .movieWrapper .illust {
+  position: absolute;
+}
+
+main .brand .brandGroup .petsochic .brandMovie .movieWrapper .grass01 {
+  top: -173px;
+  right: 505px;
+}
+
+main .brand .brandGroup .petsochic .brandMovie .movieWrapper .grass02 {
+  top: -85px;
+  right: 200px;
+}
+
+main .brand .brandGroup .petsochic .brandMovie .movieWrapper .grass03 {
+  top: 345px;
+  right: -78px;
+  z-index: 1;
+}
+
+main .brand .brandGroup .petsochic .brandMovie .movieWrapper .grass04 {
+  bottom: -160px;
+  right: 480px;
+}
+
+main .brand .brandGroup .petsochic .brandMovie .movieWrapper .grass05 {
+  top: -65px;
+  left: 185px;
+}
+
+main .brand .brandGroup .petsochic .brandMovie .movieWrapper .footprint {
+  top: -126px;
+  right: 380px;
+}
+
+main .brand .brandGroup .petsochic .brandMovie .movieWrapper .movie {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+main .brand .brandGroup .petsochic .brandMovie .movieWrapper .movie iframe {
+  display: block;
+  width: 1733px;
+  height: 978.741px;
+}
+
+main .brand .brandGroup .maxbone {
+  margin-top: 200px;
 }
 /*# sourceMappingURL=main.css.map */
