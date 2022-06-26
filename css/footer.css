@@ -1,0 +1,124 @@
+footer {
+  width: 100%;
+  margin-top: 200px;
+  background-color: #000;
+  position: relative;
+  padding: 87px 0 92px;
+}
+
+footer a {
+  cursor: url(../images/cursor-pointer.png), auto;
+}
+
+footer .goTop {
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+  position: fixed;
+  top: 230px;
+  right: 85px;
+}
+
+footer .footerLayer {
+  width: 100%;
+  height: 153px;
+  position: absolute;
+  top: -100px;
+  left: 0;
+}
+
+footer .footerContent {
+  max-width: 1524px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footerContent .leftContent .footerMenu li {
+  padding: 20px 0;
+}
+
+footer .footerContent .leftContent .footerMenu li a {
+  color: #f0ede6;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+footer .footerContent .leftContent .info {
+  margin: 40px 0 70px;
+}
+
+footer .footerContent .leftContent .info > a {
+  color: #f0ede6;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+footer .footerContent .leftContent .info .infoDetail {
+  color: #666;
+  margin-top: 15px;
+}
+
+footer .footerContent .leftContent .info .infoDetail p {
+  line-height: 2;
+}
+
+footer .footerContent .leftContent .info .infoDetail p span {
+  font-weight: 500;
+}
+
+footer .footerContent .leftContent .info .infoDetail p span + span {
+  margin-left: 10px;
+}
+
+footer .footerContent .leftContent .copyright {
+  color: rgba(240, 237, 230, 0.5);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+footer .footerContent .sns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f0ede6;
+  padding: 20px 0;
+}
+
+footer .footerContent .sns li + li {
+  margin-left: 30px;
+}
+
+footer .footerContent .sns li a {
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+  padding: 15px 0;
+  position: relative;
+}
+
+footer .footerContent .sns li a:hover svg {
+  opacity: 1;
+  visibility: visible;
+}
+
+footer .footerContent .sns li a svg {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+/*# sourceMappingURL=footer.css.map */

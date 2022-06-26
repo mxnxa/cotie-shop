@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 @import url(../css/header.css);
 @import url(../css/main.css);
+@import url(../css/footer.css);
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10,6 +11,7 @@ body {
   font-family: "Noto Sans KR", "LibreBaskerville", sans-serif;
   background-color: #f0ede6;
   cursor: url(../images/cursor-pointer.png), auto;
+  overflow-x: hidden;
 }
 
 a {
