@@ -1,8 +1,8 @@
 main {
+  width: 100%;
   padding-top: 232px;
   padding-bottom: 330px;
   overflow-x: hidden;
-
   .wrapper {
     max-width: 1542px;
     margin: 0 auto;
@@ -92,9 +92,13 @@ main {
           position: absolute;
           top: 0;
           left: 0;
+          z-index: 1;
         }
-        img {
+        img.visualImg {
           margin: 249px auto 58px;
+          // transform: rotate(-45deg);
+          // opacity: 0;
+          // transition: opacity 0.3s;
         }
         p {
           font-size: 20px;
@@ -194,6 +198,30 @@ main {
               overflow: hidden;
               position: relative;
               z-index: 2;
+              cursor: url(../images/cursor-see.png), auto;
+
+              &::after {
+                content: "+";
+                color: #fff;
+                font-size: 60px;
+                font-weight: 700;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 974px;
+                background-color: rgba(0, 0, 0, 0.3);
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+              }
+
+              &:hover {
+                &::after {
+                  opacity: 1;
+                }
+              }
 
               iframe {
                 display: block;
@@ -258,6 +286,7 @@ main {
           .hand {
             top: -290px;
             right: -310px;
+            transform: rotate(65deg);
           }
         }
       }
@@ -335,7 +364,7 @@ main {
     border-bottom: 1px solid #000;
 
     .sloganTextWrap {
-      // overflow: hidden;
+      overflow: hidden;
     }
 
     .sloganText {

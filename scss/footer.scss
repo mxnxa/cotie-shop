@@ -13,9 +13,26 @@ footer {
     display: block;
     font-size: 26px;
     font-weight: 700;
+    text-align: center;
     position: fixed;
-    top: 230px;
-    right: 85px;
+    bottom: 65px;
+    right: 80px;
+    opacity: 0;
+    // visibility: hidden;
+    transition: opacity 0.3s;
+
+    .goTopPunch {
+      width: 30px;
+      height: 62px;
+      background: center / contain no-repeat url(../images/top-paw-brown.svg);
+      opacity: 0;
+    }
+
+    &:hover {
+      .goTopPunch {
+        opacity: 1;
+      }
+    }
   }
 
   .footerLayer {

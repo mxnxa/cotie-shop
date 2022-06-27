@@ -2,18 +2,38 @@ header {
   width: 100%;
   height: 144px;
   padding: 0 80px;
+  // font-family: "Libre Baskerville", serif;
+  font-size: 24px;
+  font-weight: 700;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Libre Baskerville", serif;
-  font-size: 24px;
-  font-weight: 700;
-  // background-color: #f0ede6;
   position: fixed;
   z-index: 999;
+  transition: 0.3s;
+
+  &.minimize {
+    height: 100px;
+    border-bottom: 1px solid #000;
+    background-color: #f0ede6;
+  }
+
+  [lang="en"] {
+    font-family: "Libre Baskerville", serif;
+  }
 
   a {
     cursor: url(../images/cursor-pointer.png), auto;
+  }
+
+  .logo {
+    width: 160px;
+    height: 71px;
+
+    &.minimize {
+      width: 120px;
+      height: 54px;
+    }
   }
 
   nav {
@@ -88,7 +108,7 @@ header {
               display: inline-block;
               color: #fff;
               font-size: 18px;
-              font-family: "NotoSansKR", "LibreBaskerville", sans-serif;
+              // font-family: "NotoSansKR", "LibreBaskerville", sans-serif;
               // padding: 0 30px;
               line-height: 1.7;
               padding: 5px 0;
