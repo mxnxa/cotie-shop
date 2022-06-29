@@ -8,5 +8,4 @@ goTop.addEventListener("click", function (e) {
 window.addEventListener("scroll", function () {
   goTop.style.opacity = scrollY - 900;
   //   if (scrollY - 900) goTop.style.visibility = "visible";
-  console.log(window.scrollY);
 });

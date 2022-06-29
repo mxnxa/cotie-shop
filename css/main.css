@@ -1,5 +1,5 @@
 main {
-  width: 100%;
+  width: 100vw;
   padding-top: 232px;
   padding-bottom: 330px;
   overflow-x: hidden;
@@ -14,9 +14,13 @@ main .motionImg {
   position: absolute;
 }
 
-main .motionImg.motion {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+main .sproing {
+  -webkit-transform: rotate(-270deg) scale(0, 0);
+          transform: rotate(-270deg) scale(0, 0);
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
 }
 
 main a.basicBtn {
@@ -24,7 +28,9 @@ main a.basicBtn {
   width: 258px;
   height: 87px;
   line-height: 87px;
+  font-family: "Libre Baskerville", serif;
   font-size: 18px;
+  font-weight: 700;
   text-align: center;
   margin-top: 60px;
   position: relative;
@@ -58,6 +64,13 @@ main a.basicBtn::after {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+main .title {
+  font-family: "Libre Baskerville", serif;
+  font-size: 100px;
+  text-align: center;
+  margin-bottom: 150px;
 }
 
 main .visual .wrapper {
@@ -110,14 +123,51 @@ main .visual .wrapper .visualContent p {
   letter-spacing: -0.025em;
 }
 
-main .title {
-  font-size: 100px;
-  text-align: center;
-  margin-bottom: 150px;
-}
-
 main .brand {
   padding: 242px 0 150px;
+}
+
+main .brand .movie {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  cursor: url(../images/cursor-see.png), auto;
+}
+
+main .brand .movie a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+main .brand .movie::after {
+  content: "\2b";
+  color: #fff;
+  font-size: 70px;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+main .brand .movie:hover::after {
+  opacity: 1;
 }
 
 main .brand .wrapper {
@@ -154,6 +204,7 @@ main .brand .brandGroup .wrapper .brandInfo .infoText {
       -ms-flex: 1;
           flex: 1;
   text-align: center;
+  padding-left: 45px;
 }
 
 main .brand .brandGroup .wrapper .brandInfo .infoText p {
@@ -174,7 +225,7 @@ main .brand .brandGroup .petsochic .brandMovie {
 
 main .brand .brandGroup .petsochic .brandMovie .movieWrapper {
   width: 100%;
-  height: 100%;
+  height: 863px;
   position: relative;
 }
 
@@ -210,45 +261,18 @@ main .brand .brandGroup .petsochic .brandMovie .movieWrapper .footprint {
 }
 
 main .brand .brandGroup .petsochic .brandMovie .movieWrapper .movie {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
   z-index: 2;
   cursor: url(../images/cursor-see.png), auto;
 }
 
-main .brand .brandGroup .petsochic .brandMovie .movieWrapper .movie::after {
-  content: "+";
-  color: #fff;
-  font-size: 60px;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 974px;
-  background-color: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
-main .brand .brandGroup .petsochic .brandMovie .movieWrapper .movie:hover::after {
-  opacity: 1;
-}
-
 main .brand .brandGroup .petsochic .brandMovie .movieWrapper .movie iframe {
   display: block;
-  width: 1733px;
-  height: 978.741px;
+  width: 100%;
+  height: 978px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 main .brand .brandGroup .maxbone {
@@ -262,6 +286,11 @@ main .brand .brandGroup .maxbone .wrapper {
 main .brand .brandGroup .maxbone .wrapper .toy {
   top: 730px;
   left: -240px;
+}
+
+main .brand .brandGroup .maxbone .wrapper .brandInfo .infoText {
+  padding: 0;
+  padding-right: 45px;
 }
 
 main .brand .brandGroup .maxbone .wrapper .brandMovie {
@@ -284,13 +313,22 @@ main .brand .brandGroup .maxbone .wrapper .brandMovie .movieTypo img + img {
 }
 
 main .brand .brandGroup .maxbone .wrapper .brandMovie .movie {
+  max-width: 752px;
+  height: 100%;
+}
+
+main .brand .brandGroup .maxbone .wrapper .brandMovie .movie a {
   width: 100%;
   height: 100%;
 }
 
-main .brand .brandGroup .maxbone .wrapper .brandMovie .movie iframe {
+main .brand .brandGroup .maxbone .wrapper .brandMovie .movie a iframe {
   width: 762px;
   height: 950px;
+}
+
+main .brand .brandGroup .maxbone .wrapper .brandMovie .movie::after {
+  width: 100%;
 }
 
 main .brand .brandGroup .milkPepper {
@@ -303,14 +341,12 @@ main .brand .brandGroup .milkPepper .wrapper {
 
 main .brand .brandGroup .milkPepper .wrapper .heart {
   top: 35px;
-  right: 185px;
+  right: 160px;
 }
 
 main .brand .brandGroup .milkPepper .wrapper .hand {
-  top: -290px;
-  right: -310px;
-  -webkit-transform: rotate(65deg);
-          transform: rotate(65deg);
+  top: -310px;
+  right: -324px;
 }
 
 main .new .slider .wrapper .slides {
@@ -318,6 +354,10 @@ main .new .slider .wrapper .slides {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
 }
 
 main .new .slider .wrapper .slides li {
@@ -330,9 +370,23 @@ main .new .slider .wrapper .slides li + li {
   padding-left: 42px;
 }
 
+main .new .slider .wrapper .slides li:hover .hoverImg {
+  opacity: 1;
+}
+
 main .new .slider .wrapper .slides li a {
   display: block;
   width: 100%;
+  position: relative;
+}
+
+main .new .slider .wrapper .slides li a .hoverImg {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity 0.3s cubic-bezier(0, 0, 0.58, 0.32);
+  transition: opacity 0.3s cubic-bezier(0, 0, 0.58, 0.32);
 }
 
 main .new .slider .wrapper .slides li a .productText {
@@ -364,13 +418,19 @@ main .new .slider .wrapper .sliderControl .paging {
 }
 
 main .new .slider .wrapper .sliderControl .btns {
-  width: 100%;
   text-align: center;
 }
 
-main .new .slider .wrapper .sliderControl .btns .prev,
-main .new .slider .wrapper .sliderControl .btns .next {
-  font-size: 24px;
+main .new .slider .wrapper .sliderControl .btns button {
+  font-size: 70px;
+  font-weight: 400;
+  border: none;
+  background: none;
+  padding: 0 20px;
+}
+
+main .new .slider .wrapper .sliderControl .btns button:hover {
+  cursor: url(../images/cursor-tiny.png), auto;
 }
 
 main .slogan {
@@ -389,9 +449,6 @@ main .slogan .sloganTextWrap {
 main .slogan .sloganText {
   width: 100%;
   white-space: nowrap;
-}
-
-main .slogan .sloganText .move {
   -webkit-animation: sloganMove 10s linear infinite;
           animation: sloganMove 10s linear infinite;
 }

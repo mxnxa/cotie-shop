@@ -1,9 +1,10 @@
 footer {
-  width: 100%;
+  width: 100vw;
   margin-top: 200px;
   background-color: #000;
   position: relative;
   padding: 87px 0 92px;
+  font-family: "Libre Baskerville", serif;
 }
 
 footer a {
@@ -21,6 +22,39 @@ footer .goTop {
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  z-index: 2;
+}
+
+footer .goTop:hover span {
+  -webkit-transform: translate3d(-6px, -62px, 0) rotate(-25deg);
+          transform: translate3d(-6px, -62px, 0) rotate(-25deg);
+  -webkit-transition: -webkit-transform 0;
+  transition: -webkit-transform 0;
+  transition: transform 0;
+  transition: transform 0, -webkit-transform 0;
+}
+
+footer .goTop:hover .goTopPunch {
+  opacity: 1;
+  visibility: visible;
+  bottom: -10px;
+}
+
+footer .goTop:hover i {
+  opacity: 0;
+}
+
+footer .goTop i {
+  display: block;
+  font-size: 20px;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  z-index: 1;
+}
+
+footer .goTop span {
+  display: block;
+  z-index: 1;
 }
 
 footer .goTop .goTopPunch {
@@ -28,10 +62,15 @@ footer .goTop .goTopPunch {
   height: 62px;
   background: center/contain no-repeat url(../images/top-paw-brown.svg);
   opacity: 0;
-}
-
-footer .goTop:hover .goTopPunch {
-  opacity: 1;
+  visibility: hidden;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: bottom 0.1s;
+  transition: bottom 0.1s;
+  z-index: 1;
 }
 
 footer .footerLayer {
@@ -40,6 +79,10 @@ footer .footerLayer {
   position: absolute;
   top: -100px;
   left: 0;
+}
+
+footer .footerLayer img {
+  width: 100%;
 }
 
 footer .footerContent {
@@ -62,21 +105,59 @@ footer .footerContent .leftContent .footerMenu li a {
   font-size: 60px;
   font-weight: 700;
   line-height: 1;
+  -webkit-transition: color 0.3s cubic-bezier(0.05, 0.9, 0.32, 0.96);
+  transition: color 0.3s cubic-bezier(0.05, 0.9, 0.32, 0.96);
+}
+
+footer .footerContent .leftContent .footerMenu li a:hover {
+  color: #ccc7bb;
 }
 
 footer .footerContent .leftContent .info {
   margin: 40px 0 70px;
+  height: 30px;
+  overflow: hidden;
+  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
 }
 
-footer .footerContent .leftContent .info > a {
+footer .footerContent .leftContent .info.active {
+  height: 100px;
+}
+
+footer .footerContent .leftContent .info.active .infoBtn::after {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+footer .footerContent .leftContent .info .infoBtn {
   color: #f0ede6;
   font-size: 18px;
   font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footerContent .leftContent .info .infoBtn::after {
+  content: "\f107";
+  font-size: 22px;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  margin-left: 10px;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 footer .footerContent .leftContent .info .infoDetail {
   color: #666;
   margin-top: 15px;
+  font-family: "Noto Sans KR", "LibreBaskerville", sans-serif;
 }
 
 footer .footerContent .leftContent .info .infoDetail p {
@@ -105,19 +186,18 @@ footer .footerContent .sns {
       -ms-flex-align: center;
           align-items: center;
   color: #f0ede6;
-  padding: 20px 0;
 }
 
 footer .footerContent .sns li + li {
-  margin-left: 30px;
+  margin-left: 50px;
 }
 
 footer .footerContent .sns li a {
   display: block;
   font-size: 26px;
   font-weight: 700;
-  padding: 15px 0;
   position: relative;
+  padding-bottom: 10px;
 }
 
 footer .footerContent .sns li a:hover svg {

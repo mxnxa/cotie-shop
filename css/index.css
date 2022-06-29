@@ -19,8 +19,7 @@ a {
   color: inherit;
 }
 
-a,
-button {
+a {
   cursor: url(../images/cursor-hand.png), auto;
 }
 /*# sourceMappingURL=index.css.map */

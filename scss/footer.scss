@@ -1,9 +1,10 @@
 footer {
-  width: 100%;
+  width: 100vw;
   margin-top: 200px;
   background-color: #000;
   position: relative;
   padding: 87px 0 92px;
+  font-family: "Libre Baskerville", serif;
 
   a {
     cursor: url(../images/cursor-pointer.png), auto;
@@ -18,20 +19,51 @@ footer {
     bottom: 65px;
     right: 80px;
     opacity: 0;
-    // visibility: hidden;
     transition: opacity 0.3s;
+    z-index: 2;
+
+    &:hover {
+      span {
+        transform: translate3d(-6px, -62px, 0) rotate(-25deg);
+        transition: transform 0;
+      }
+
+      .goTopPunch {
+        opacity: 1;
+        visibility: visible;
+        bottom: -10px;
+      }
+
+      i {
+        opacity: 0;
+      }
+    }
+
+    i {
+      display: block;
+      font-size: 20px;
+      transition: opacity 0.5s;
+      z-index: 1;
+    }
+
+    span {
+      display: block;
+      // transition: transform 0.3s;
+      z-index: 1;
+    }
 
     .goTopPunch {
       width: 30px;
       height: 62px;
       background: center / contain no-repeat url(../images/top-paw-brown.svg);
       opacity: 0;
-    }
-
-    &:hover {
-      .goTopPunch {
-        opacity: 1;
-      }
+      visibility: hidden;
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: bottom 0.1s;
+      z-index: 1;
     }
   }
 
@@ -41,6 +73,10 @@ footer {
     position: absolute;
     top: -100px;
     left: 0;
+
+    img {
+      width: 100%;
+    }
   }
 
   .footerContent {
@@ -58,21 +94,52 @@ footer {
             font-size: 60px;
             font-weight: 700;
             line-height: 1;
+            transition: color 0.3s cubic-bezier(0.05, 0.9, 0.32, 0.96);
+
+            &:hover {
+              color: #ccc7bb;
+            }
           }
         }
       }
 
       .info {
         margin: 40px 0 70px;
+        height: 30px;
+        overflow: hidden;
+        transition: height 0.3s;
 
-        > a {
+        &.active {
+          height: 100px;
+
+          .infoBtn {
+            &::after {
+              transform: rotate(-180deg);
+            }
+          }
+        }
+
+        .infoBtn {
           color: #f0ede6;
           font-size: 18px;
           font-weight: 700;
+          display: flex;
+          align-items: center;
+
+          &::after {
+            content: "\f107";
+            font-size: 22px;
+            font-weight: 900;
+            font-family: "Font Awesome 5 Free";
+            margin-left: 10px;
+            transition: transform 0.4s;
+          }
         }
+
         .infoDetail {
           color: #666;
           margin-top: 15px;
+          font-family: "Noto Sans KR", "LibreBaskerville", sans-serif;
 
           p {
             line-height: 2;
@@ -96,18 +163,18 @@ footer {
       display: flex;
       align-items: center;
       color: #f0ede6;
-      padding: 20px 0;
+      // padding: 20px 0;
 
       li {
         & + li {
-          margin-left: 30px;
+          margin-left: 50px;
         }
         a {
           display: block;
           font-size: 26px;
           font-weight: 700;
-          padding: 15px 0;
           position: relative;
+          padding-bottom: 10px;
 
           &:hover {
             svg {
