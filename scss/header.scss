@@ -42,8 +42,8 @@ header {
       justify-content: center;
 
       .depth01 {
-        width: 160px;
         position: relative;
+        width: 145px;
 
         &:hover {
           &::before {
@@ -79,9 +79,9 @@ header {
           position: relative;
         }
         .depth02 {
-          width: 154px;
+          width: 100%;
           background-color: #000;
-          padding: 25px;
+          padding: 20px;
           position: absolute;
           top: 100%;
           left: 0;
@@ -97,12 +97,12 @@ header {
                 }
               }
             }
+
             > a {
               display: inline-block;
               color: #fff;
               font-size: 17px;
               font-family: "NotoSansKR", "LibreBaskerville", sans-serif;
-              // padding: 0 30px;
               line-height: 1.7;
               padding: 5px 0;
 
@@ -124,7 +124,7 @@ header {
     .icons {
       display: flex;
       align-items: center;
-      margin-left: 80px;
+      margin-left: 30px;
 
       .search {
         margin-right: 20px;

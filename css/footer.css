@@ -12,10 +12,20 @@ footer a {
 }
 
 footer .goTop {
-  display: block;
+  height: 100px;
   font-size: 26px;
   font-weight: 700;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   position: fixed;
   bottom: 65px;
   right: 80px;
@@ -23,6 +33,12 @@ footer .goTop {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   z-index: 2;
+}
+
+footer .goTop.positionChange {
+  position: absolute;
+  top: -230px;
+  right: 100px;
 }
 
 footer .goTop:hover span {
@@ -74,7 +90,7 @@ footer .goTop .goTopPunch {
 }
 
 footer .footerLayer {
-  width: 100%;
+  width: 100vw;
   height: 153px;
   position: absolute;
   top: -100px;

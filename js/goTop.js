@@ -1,4 +1,5 @@
 const goTop = document.querySelector(".goTop");
+const footerLayer = document.querySelector(".footerLayer");
 
 goTop.addEventListener("click", function (e) {
   e.preventDefault();
@@ -7,5 +8,7 @@ goTop.addEventListener("click", function (e) {
 
 window.addEventListener("scroll", function () {
   goTop.style.opacity = scrollY - 900;
-  //   if (scrollY - 900) goTop.style.visibility = "visible";
+  if (window.innerHeight > footerLayer.getBoundingClientRect().top) {
+    goTop.classList.add("positionChange");
+  } else goTop.classList.remove("positionChange");
 });

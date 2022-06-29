@@ -1,0 +1,63 @@
+@media (max-width: 1480px) {
+  header {
+    height: 118px;
+    padding: 0 40px;
+
+    .logo {
+      width: 130px;
+      height: 58px;
+    }
+
+    .gnbList {
+      .depth01 {
+        > a {
+          font-size: 23px;
+          padding: 10px 22px;
+        }
+      }
+    }
+
+    .icons {
+      .search {
+        margin-right: 10px;
+      }
+      .search,
+      .link {
+        &::after {
+          font-size: 24px !important;
+        }
+      }
+    }
+  }
+
+  main {
+    .visual {
+      .wrapper {
+        margin: 0 50px;
+        .motionImg {
+          transform: scale(0.8);
+        }
+        .bib {
+          left: 15%;
+        }
+        .bone {
+          top: 350px;
+          left: 20px;
+        }
+        .cloud {
+          top: 200px;
+          right: 30px;
+        }
+
+        .visualContent {
+          h1 {
+            font-size: 100px;
+          }
+          img {
+            width: 845px;
+          }
+        }
+      }
+    }
+  }
+}

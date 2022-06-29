@@ -1,0 +1,46 @@
+@media (max-width: 1480px) {
+  header {
+    height: 118px;
+    padding: 0 40px;
+  }
+  header .logo {
+    width: 130px;
+    height: 58px;
+  }
+  header .gnbList .depth01 > a {
+    font-size: 23px;
+    padding: 10px 22px;
+  }
+  header .icons .search {
+    margin-right: 10px;
+  }
+  header .icons .search::after,
+  header .icons .link::after {
+    font-size: 24px !important;
+  }
+  main .visual .wrapper {
+    margin: 0 50px;
+  }
+  main .visual .wrapper .motionImg {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  main .visual .wrapper .bib {
+    left: 15%;
+  }
+  main .visual .wrapper .bone {
+    top: 350px;
+    left: 20px;
+  }
+  main .visual .wrapper .cloud {
+    top: 200px;
+    right: 30px;
+  }
+  main .visual .wrapper .visualContent h1 {
+    font-size: 100px;
+  }
+  main .visual .wrapper .visualContent img {
+    width: 845px;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

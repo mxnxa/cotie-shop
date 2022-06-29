@@ -3,6 +3,7 @@ main {
   padding-top: 232px;
   padding-bottom: 330px;
   overflow-x: hidden;
+
   .wrapper {
     max-width: 1542px;
     margin: 0 auto;
@@ -139,20 +140,21 @@ main {
 
       &::after {
         content: "\2b";
+        width: 100%;
+        height: 100%;
         color: #fff;
         font-size: 70px;
         font-weight: 900;
         font-family: "Font Awesome 5 Free";
+        background-color: rgba(0, 0, 0, 0.3);
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
         position: absolute;
         top: 0;
         left: 0;
         opacity: 0;
+        transition: opacity 0.3s;
       }
 
       &:hover {
@@ -203,13 +205,6 @@ main {
       }
 
       .petsochic {
-        // .wrapper {
-        //   .brandInfo {
-        //     .infoText {
-        //       padding-left: 45px;
-        //     }
-        //   }
-        // }
         .brandMovie {
           margin-top: 80px;
           padding-right: 180px;
